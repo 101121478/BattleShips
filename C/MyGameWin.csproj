@@ -36,7 +36,10 @@
   <PropertyGroup>
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\animations\splash.txt" />
+    <Content Include="Resources\highscores.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameController.cs" />
     <Compile Include="src\EndingGameController.cs" />
@@ -52,7 +55,6 @@
     <Compile Include="src\Model\AttackResult.cs" />
     <Compile Include="src\DeploymentController.cs" />
     <Compile Include="src\GameLogic.cs" />
-    <Compile Include="src\GameMain.cs" />
     <Compile Include="src\Model\BattleShipsGame.cs" />
     <Compile Include="src\Model\Direction.cs" />
     <Compile Include="src\Model\ISeaGrid.cs" />
@@ -77,6 +79,7 @@
     <None Include="Resources\**\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\fonts\ffaccess.ttf" />
     <WinLibs Include="lib\win32\*.dll" />
   </ItemGroup>
   <Target Name="CopyLibsToOut">
