@@ -1,7 +1,7 @@
 ﻿using System;
 using MyGame.src.Model;
 
-namespace MyGame.src
+namespace MyGame.src.Model
 {
     // '' <summary>
     // '' AttackResult gives the result after a shot has been made.

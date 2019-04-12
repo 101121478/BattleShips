@@ -4,7 +4,7 @@ using static SwinGameSDK.SwinGame; // requires mcs version 4+,
 using MyGame.src;
 // using SwinGameSDK.SwinGame; // requires mcs version 4+, 
 
-namespace MyGame
+namespace MyGame.src
 {
     class GameLogic
     {
