@@ -54,3 +54,7 @@ C:\Users\Callu\Documents\2019 UNI\GameTemplate\GameTemplate\obj\x86\Debug-Window
 C:\Users\Callu\Documents\2019 UNI\GameTemplate\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CopyComplete
 C:\Users\Callu\Documents\2019 UNI\GameTemplate\GameTemplate\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\Callu\Documents\2019 UNI\GameTemplate\GameTemplate\obj\x86\Debug-Windows\MyGame.pdb
+C:\Users\luke3\Desktop\BattleShips\C\obj\x86\Debug-Windows\MyGameWin.csprojAssemblyReference.cache
+C:\Users\luke3\Desktop\BattleShips\C\obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache
+C:\Users\luke3\Desktop\BattleShips\C\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\luke3\Desktop\BattleShips\C\obj\x86\Debug-Windows\MyGame.pdb
