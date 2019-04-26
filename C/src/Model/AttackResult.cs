@@ -63,7 +63,13 @@ namespace MyGame.src.Model
                 return _Column;
             }
         }
-
+        // '' <summary>
+        // '' asinges values to the resolt of the atack 
+        // '' </summary>
+        // '' <param name="value">resolt of atack</param>
+        // '' <param name="text">asinges a string</param>
+        // '' <param name="row">asinges coordanet of row</param>
+        // '' <param name="text">asinges coordaniat of colum</param>
         public AttackResult(ResultOfAttack value, string text, int row, int column)
         {
             _Value = value;

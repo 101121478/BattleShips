@@ -92,7 +92,9 @@ namespace MyGame.src.Model
             // '' </summary>
             HittingShip,
         }
-
+        // '' <summary>
+        // '' Sets curent state to ai state.serching
+        // '' </summary>
         private AIStates _CurrentState = AIStates.Searching;
 
         private Stack<Target> _Targets = new Stack<Target>();
@@ -196,15 +198,15 @@ namespace MyGame.src.Model
                 _CurrentState = AIStates.Searching;
             }
 
-            // '' <summary>
+            
+        }
+// '' <summary>
             // '' ProcessDetroy is able to process the destroyed ships targets and remove _LastHit targets.
             // '' It will also call RemoveShotsAround to remove targets that it was going to shoot at
             // '' </summary>
             // '' <param name="row">the row that was shot at and destroyed</param>
             // '' <param name="col">the row that was shot at and destroyed</param>
             // '' <param name="ship">the row that was shot at and destroyed</param>
-        }
-
         void ProcessDestroy(int row, int col, Ship ship)
         {
             bool foundOriginal;
