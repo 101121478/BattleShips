@@ -13,12 +13,12 @@ public static class GameResources
 	private static void LoadFonts()
 	{
 		NewFont("ArialLarge", "arial.ttf", 80);
-		NewFont("Courier", "cour.ttf", 14);
-		NewFont("CourierSmall", "cour.ttf", 8);
+		NewFont("Courier", "cour.ttf", 16);
+		NewFont("CourierSmall", "cour.ttf", 12);
 		NewFont("Menu", "ffaccess.ttf", 8);
 	}
 
-	private static void LoadImages()
+    private static void LoadImages()
 	{
 		//Backgrounds
 		NewImage("Menu", "main_page.jpg");
@@ -72,13 +72,62 @@ public static class GameResources
 		return _Fonts[font];
 	}
 
-	/// <summary>
-	/// Gets an Image loaded in the Resources
-	/// </summary>
-	/// <param name="image">Name of image</param>
-	/// <returns>The image loaded with this name</returns>
+    /// <summary>
+    /// Cycles the fonts randomly
+    /// </summary>
+    public static void CycleFonts()
+    {
+        Dictionary<string, int> fonts = new Dictionary<string, int>();
+        Random random = new Random();
+        string[] fontFilenameList = new string[] {
+            "arial.ttf",
+            "cour.ttf",
+            "cour.ttf",
+            "ffaccess.ttf"
+        };
 
-	public static Bitmap GameImage(string image)
+        foreach (KeyValuePair<string, Font> font in _Fonts)
+        {
+            string fontName = font.Key;
+            if (fontName == "ArialLarge")
+            {
+                fonts.Add(fontName, 80);
+                continue;
+            }
+            if (fontName == "Courier")
+            {
+                fonts.Add(fontName, 16);
+                continue;
+            }
+            fonts.Add(fontName, 12);
+        }
+
+        foreach (KeyValuePair<string, int> font in fonts)
+        {
+            int randomNumber = random.Next(0, fonts.Count - 1);
+            string fontName = font.Key;
+            string fontFile = fontFilenameList[randomNumber];
+            int fontSize = font.Value;
+            if (fontName == "Menu" && fontFile == "ffaccess.ttf")
+            {
+                UpdateFont(fontName, fontFile, 8);
+                continue;
+            }
+            UpdateFont(fontName, fontFile, 8);
+
+            UpdateFont(font.Key, fontFilenameList[randomNumber], fontSize);
+        }
+
+        SwinGame.RefreshScreen();
+    }
+
+    /// <summary>
+    /// Gets an Image loaded in the Resources
+    /// </summary>
+    /// <param name="image">Name of image</param>
+    /// <returns>The image loaded with this name</returns>
+
+    public static Bitmap GameImage(string image)
 	{
 		return _Images[image];
 	}
@@ -265,6 +314,17 @@ public static class GameResources
 	{
 		_Fonts.Add(fontName, SwinGame.LoadFont(filename, size));
 	}
+
+    /// <remarks>
+    /// Update Fonts
+    /// </remarks>
+    /// <param name="fontName">Name of font (used as the key in _Fonts)</param>
+    /// <param name="filename">File name of font</param>
+    /// <param name="size">Font size</param>
+    private static void UpdateFont(string fontName, string filename, int size)
+    {
+        _Fonts[fontName] = SwinGame.LoadFont(filename, size);
+    }
 
 	/// <remarks>
 	/// Isuru : updated the swingame call
