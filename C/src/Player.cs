@@ -106,7 +106,9 @@ public class Player : IEnumerable<Ship>
 	public int Shots {
 		get { return _shots; }
 	}
-
+    /// <summary>
+    /// number of hits the player has made
+    /// </summary>
 	public int Hits {
 		get { return _hits; }
 	}
@@ -197,7 +199,9 @@ public class Player : IEnumerable<Ship>
 
 		return result;
 	}
-
+    /// <summary>
+    /// places ships randomly
+    /// </summary>
 	public virtual void RandomizeDeployment()
 	{
 		bool placementSuccessful = false;

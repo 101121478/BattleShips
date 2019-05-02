@@ -121,7 +121,12 @@ public static class GameController
 		DrawScreen();
 		SwinGame.RefreshScreen();
 	}
-
+    /// <summary>
+    /// plays out actions for a hit
+    /// </summary>
+    /// <param name="row"></param>
+    /// <param name="column"></param>
+    /// <param name="showAnimation"></param>
 	private static void PlayHitSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {
@@ -132,7 +137,12 @@ public static class GameController
 
 		UtilityFunctions.DrawAnimationSequence();
 	}
-
+    /// <summary>
+    /// plays out actions for miss
+    /// </summary>
+    /// <param name="row"></param>
+    /// <param name="column"></param>
+    /// <param name="showAnimation"></param>
 	private static void PlayMissSequence(int row, int column, bool showAnimation)
 	{
 		if (showAnimation) {

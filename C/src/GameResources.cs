@@ -6,7 +6,9 @@ using System.Collections.Generic;
 //using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
-
+/// <summary>
+/// loads game resources
+/// </summary>
 public static class GameResources
 {
 
@@ -209,7 +211,11 @@ public static class GameResources
 		SwinGame.Delay(1500);
 
 	}
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="message"></param>
+    /// <param name="number"></param>
 	private static void ShowMessage(string message, int number)
 	{
 		const int TX = 310;
@@ -242,7 +248,11 @@ public static class GameResources
 		SwinGame.RefreshScreen();
 		SwinGame.ProcessEvents();
 	}
-
+    /// <summary>
+    /// clears the load screen
+    /// </summary>
+    /// <param name="width"></param>
+    /// <param name="height"></param>
 	private static void EndLoadingScreen(int width, int height)
 	{
 		SwinGame.ProcessEvents();

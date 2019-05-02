@@ -64,15 +64,22 @@ public class Ship
 	public int Row {
 		get { return _row; }
 	}
-
+    /// <summary>
+    /// The column location of the ship
+    /// </summary>
 	public int Column {
 		get { return _col; }
 	}
-
+    /// <summary>
+    /// The direction of the ship
+    /// </summary>
 	public Direction Direction {
 		get { return _direction; }
 	}
-
+    /// <summary>
+    /// the name of the ship
+    /// </summary>
+    /// <param name="ship"></param>
 	public Ship(ShipName ship)
 	{
 		_shipName = ship;
@@ -101,7 +108,9 @@ public class Ship
 		}
 		_tiles.Clear();
 	}
-
+    /// <summary>
+    /// adds hits to ship
+    /// </summary>
 	public void Hit()
 	{
 		_hitsTaken = _hitsTaken + 1;
