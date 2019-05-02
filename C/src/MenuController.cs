@@ -37,16 +37,17 @@ static class MenuController
 		new string[] {
 			"EASY",
 			"MEDIUM",
-			"HARD"
+			"HARD",
+           "CHANGE FONT"
 		}
 
 	};
 	private const int MENU_TOP = 575;
 	private const int MENU_LEFT = 30;
-	private const int MENU_GAP = 0;
-	private const int BUTTON_WIDTH = 75;
+	private const int MENU_GAP = 5;
+	private const int BUTTON_WIDTH = 90;
 	private const int BUTTON_HEIGHT = 15;
-	private const int BUTTON_SEP = BUTTON_WIDTH + MENU_GAP;
+	private const int BUTTON_SEP = BUTTON_WIDTH - MENU_GAP;
 
 	private const int TEXT_OFFSET = 0;
 	private const int MAIN_MENU = 0;
@@ -61,6 +62,7 @@ static class MenuController
 	private const int SETUP_MENU_EASY_BUTTON = 0;
 	private const int SETUP_MENU_MEDIUM_BUTTON = 1;
 	private const int SETUP_MENU_HARD_BUTTON = 2;
+    private const int SETUP_MENU_CHANGE_FONT_BUTTON = 3;
 
 	private const int SETUP_MENU_EXIT_BUTTON = 3;
 	private const int GAME_MENU_RETURN_BUTTON = 0;
@@ -167,8 +169,8 @@ static class MenuController
 	/// </remarks>
 	public static void DrawSettings()
 	{
-		//Clears the Screen to Black
-		//SwinGame.DrawText("Settings", Color.White, GameFont("ArialLarge"), 50, 50)
+        //Clears the Screen to Black
+        //SwinGame.DrawText("Settings", Color.White, GameFont("ArialLarge"), 50, 50)
 
 		DrawButtons(MAIN_MENU);
 		DrawButtons(SETUP_MENU, 1, 1);
@@ -303,6 +305,9 @@ static class MenuController
 			case SETUP_MENU_HARD_BUTTON:
 				GameController.SetDifficulty(AIOption.Hard);
 				break;
+            case SETUP_MENU_CHANGE_FONT_BUTTON:
+                GameController.CycleFonts();
+                break;
 		}
 		//Always end state - handles exit button as well
 		GameController.EndCurrentState();

@@ -380,4 +380,12 @@ public static class GameController
 		_aiSetting = setting;
 	}
 
+    /// <summar>
+    /// Cycles game font
+    /// </summar>
+    public static void CycleFonts()
+    {
+        GameResources.CycleFonts();
+    }
+
 }
