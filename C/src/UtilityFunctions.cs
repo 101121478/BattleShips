@@ -25,13 +25,13 @@ static class UtilityFunctions
 
 	public const int SHIP_GAP = 3;
 	private static readonly Color SMALL_SEA = SwinGame.RGBAColor(6, 60, 94, 255);
-	private static readonly Color SMALL_SHIP = Color.Gray;
-	private static readonly Color SMALL_MISS = SwinGame.RGBAColor(1, 147, 220, 255);
+	private static readonly Color SMALL_SHIP = Color.Grey;
+	private static readonly Color SMALL_MISS = Color.Green;
 
 	private static readonly Color SMALL_HIT = SwinGame.RGBAColor(169, 24, 37, 255);
 	private static readonly Color LARGE_SEA = SwinGame.RGBAColor(6, 60, 94, 255);
 	private static readonly Color LARGE_SHIP = Color.Gray;
-	private static readonly Color LARGE_MISS = SwinGame.RGBAColor(1, 147, 220, 255);
+	private static readonly Color LARGE_MISS = Color.Purple;
 
 	private static readonly Color LARGE_HIT = SwinGame.RGBAColor(252, 2, 3, 255);
 	private static readonly Color OUTLINE_COLOR = SwinGame.RGBAColor(5, 55, 88, 255);
@@ -237,14 +237,14 @@ static class UtilityFunctions
 			case GameState.ViewingGameMenu:
 			case GameState.AlteringSettings:
 			case GameState.ViewingHighScores:
-				SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);
+                SwinGame.DrawBitmap(GameResources.GameImage("Menu"), 0, 0);
 				break;
 			case GameState.Discovering:
 			case GameState.EndingGame:
-				SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);
+                SwinGame.DrawBitmap(GameResources.GameImage("Discovery"), 0, 0);
 				break;
 			case GameState.Deploying:
-				SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
+                SwinGame.DrawBitmap(GameResources.GameImage("Deploy"), 0, 0);
 				break;
 			default:
 				SwinGame.ClearScreen();
